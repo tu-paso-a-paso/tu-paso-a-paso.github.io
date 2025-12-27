@@ -1,9 +1,11 @@
 title: "Tu paso a paso"
 lang: "bg"
-description: "Испанският език по лесен и достъпен начин."
+description: "Испанска граматика и лексика без реклами и лесна за практикуване."
 
 owner: "Anna Ilieva"
 email: "a.j.webdev.prof@gmail.com"
+baseurl: "" # the subpath of the site
+url: "https://tu-paso-a-paso.github.io"
 
 # type --> "pages", "posts", "drafts" or any custom created collection
 defaults:
