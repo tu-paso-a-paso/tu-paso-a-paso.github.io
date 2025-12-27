@@ -5,7 +5,7 @@
     <ul id="category-list">
         {% for category in post_categories %}
         <li>
-            <span class="my-li"><i class="fa-solid fa-angle-right fa-sm"></i></span>
+            <span class="i-btn"><i class="fa-solid fa-angle-right fa-sm"></i></span>
             <a href="{{ '/category?cat=' | append: category[0] | relative_url }}">{{ category[0] }} ({{ category[1].size }})</a>
 
             <div class="hidden-list">

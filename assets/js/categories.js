@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     categories.forEach((category, index) => {
-        const icon = category.querySelector(".my-li i");
+        const icon = category.querySelector(".i-btn i");
         const dropdownList = category.querySelector(".hidden-list");
         icon.addEventListener('click', () => toggleCategory(index));
         
