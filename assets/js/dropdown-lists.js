@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const categoryList = document.querySelector("#category-list");
-    const categories = categoryList.querySelectorAll("li");
-    let stateCategories = (localStorage.getItem('stateCategories') != null) ? JSON.parse(localStorage.getItem('stateCategories')) : [];
+    const dropdownItem = document.querySelectorAll(".fa-dropdown-list li");
+    let stateItems = (localStorage.getItem('stateItems') != null) ? JSON.parse(localStorage.getItem('stateItems')) : [];
     
-    
-    categories.forEach((category, index) => {
+    dropdownItem.forEach((category, index) => {
         const icon = category.querySelector(".i-btn i");
         const dropdownList = category.querySelector(".hidden-list");
         icon.addEventListener('click', () => toggleCategory(index));
         
-        setCategoryMode(stateCategories[index]);
+        setCategoryMode(stateItems[index]);
         
         function setCategoryMode(mode) {
             dropdownList.style.display = mode;
@@ -18,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         function toggleCategory(index) {
-            if (stateCategories[index] == "block")
+            if (stateItems[index] == "block")
                 setCategoryMode("none");
             else
                 setCategoryMode("block");
-            stateCategories[index] = dropdownList.style.display;
-            localStorage.setItem('stateCategories', JSON.stringify(stateCategories));
+            stateItems[index] = dropdownList.style.display;
+            localStorage.setItem('stateItems', JSON.stringify(stateItems));
         }
     })
 });

@@ -1,15 +1,15 @@
-{% assign post_categories = site.categories | sort: name %}
+{% assign post_tags = site.tags | sort: name %}
 
-{%- if post_categories.size > 0 -%}
+{%- if post_tags.size > 0 -%}
 <div class="part">
-    <ul id="category-list" class="fa-dropdown-list">
-        {% for category in post_categories %}
+    <ul id="tag-list" class="fa-dropdown-list">
+        {% for tag in post_tags %}
         <li>
             <span class="i-btn"><i class="fa-solid fa-angle-right fa-sm"></i></span>
-            <a href="{{ '/category?cat=' | append: category[0] | relative_url }}">{{ category[0] }} ({{ category[1].size }})</a>
+            <a href="{{ '/tag?cat=' | append: tag[0] | relative_url }}">{{ tag[0] }} ({{ tag[1].size }})</a>
 
             <div class="hidden-list">
-                {% assign posts = category[1] | sort: title %}
+                {% assign posts = tag[1] | sort: title %}
                 {% for post in posts %}
                     <a href="{{ post.url }}"> {{ post.title }}</a>
                     {% unless forloop.last %}<br>{% endunless %}
