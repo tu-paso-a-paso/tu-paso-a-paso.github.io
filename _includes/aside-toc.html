@@ -1,0 +1,11 @@
+{% capture toc_html %}
+    {{ content | toc_only }}
+{% endcapture %}
+
+{% assign toc_content = toc_html | strip_html | strip %}
+
+{% if toc_content != "" %}
+<div class="part">
+    {{ content | toc_only }}
+</div>
+{% endif %}

@@ -1,0 +1,22 @@
+{% assign post_categories = site.categories %}
+
+{%- if post_categories.size > 0 -%}
+<div class="part">
+    <ul id="category-list">
+        {% for category in post_categories %}
+        <li>
+            <span class="my-li"><i class="fa-solid fa-angle-right fa-sm"></i></span>
+            <a href="{{ '/category?cat=' | append: category[0] | relative_url }}">{{ category[0] }} ({{ category[1].size }})</a>
+
+            <div class="hidden-list">
+                {% assign posts = category[1] | sort: title %}
+                {% for post in posts %}
+                    <a href="{{ post.url }}"> {{ post.title }}</a>
+                    {% unless forloop.last %}<br>{% endunless %}
+                {% endfor %}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

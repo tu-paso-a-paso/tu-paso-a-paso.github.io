@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang={{ site.lang | default: "en"}} data-theme="light">
+
+{%- include head.html -%}
+
+<body>
+{%- include header.html -%}
+{%- include nav.html -%}
+
+<div class="content">
+    <main>
+        {{ content }}
+    </main>
+</div>
+
+{%- include footer.html -%}
+</body>
+
+</html>

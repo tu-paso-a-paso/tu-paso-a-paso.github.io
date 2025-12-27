@@ -1,0 +1,32 @@
+title: "Tu paso a paso"
+lang: "bg"
+description: "Испанският език по лесен и достъпен начин."
+
+owner: "Anna Ilieva"
+email: "a.j.webdev.prof@gmail.com"
+
+# type --> "pages", "posts", "drafts" or any custom created collection
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      toc: true
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/posts/:title"
+      toc: true
+
+# table of contents
+toc:
+  min_level: 1
+  max_level: 3
+  list_class: toc-list
+  sublist_class: toc-sublist
+
+plugins:
+  - jekyll-toc
