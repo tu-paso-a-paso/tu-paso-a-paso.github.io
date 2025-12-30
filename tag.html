@@ -1,5 +1,5 @@
 ---
-title: Posts by Category
+title: Posts by Tag
 ---
 
 <h2 id="title"></h2>
@@ -7,13 +7,13 @@ title: Posts by Category
 
 <script>
   const params = new URLSearchParams(location.search);
-  const category = params.get("cat") ?? localStorage.getItem('lastCategoryOpened');
-  if(params.get("cat")) {
-    localStorage.setItem('lastCategoryOpened', category);
+  const current_tag = params.get("tag") ?? localStorage.getItem('lastTagOpened');
+  if(params.get("tag")) {
+    localStorage.setItem('lastTagOpened', current_tag);
     window.history.pushState({}, "", window.location.href.split("?")[0]);
   }
   
-  document.getElementById("title").textContent = category;
+  document.getElementById("title").textContent = current_tag;
   
   fetch("{{ '/assets/js/posts.json' | relative_path }}")
   .then(r => r.json())
@@ -21,7 +21,7 @@ title: Posts by Category
     const postsList = document.getElementById("posts");
 
     posts
-    .filter(p => p.categories.includes(category))
+    .filter(p => p.tags.includes(current_tag))
     .forEach(p => {
       const li = document.createElement("li");
       li.innerHTML = `<a href="${p.url}">${p.title}</a>`;

@@ -5,7 +5,7 @@
   {%- if paths -%}
     {%- for path in paths -%}
       {%- assign a_page = site.pages | where: "path", path | first -%}
-      {%- if a_page.title and a_page.url != "/" and a_page.url != "/category.html" -%}
+      {%- if a_page.title and a_page.url != "/" and a_page.url != "/category.html" and a_page.url != "/tag.html" -%}
         <a class="nav-link{% if page.url == a_page.url %} active{% endif %}" href="{{ a_page.url | relative_url }}">{{ a_page.title | escape }}</a>
       {%- endif -%}
     {%- endfor -%}

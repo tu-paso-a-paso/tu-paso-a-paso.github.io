@@ -6,7 +6,7 @@
         {% for tag in post_tags %}
         <li>
             <span class="i-btn"><i class="fa-solid fa-angle-right fa-sm"></i></span>
-            <a href="{{ '/tag?cat=' | append: tag[0] | relative_url }}">{{ tag[0] }} ({{ tag[1].size }})</a>
+            <a href="{{ '/tag?tag=' | append: tag[0] | relative_url }}">{{ tag[0] }} ({{ tag[1].size }})</a>
 
             <div class="hidden-list">
                 {% assign posts = tag[1] | sort: title %}
