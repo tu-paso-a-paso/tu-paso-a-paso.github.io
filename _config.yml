@@ -1,6 +1,6 @@
 title: "Tu paso a paso"
 lang: "bg"
-description: "Испанска граматика и лексика без реклами и лесна за практикуване."
+description: "Испанска граматика и лексика чрез проста практика."
 
 owner: "Anna Ilieva"
 email: "a.j.webdev.prof@gmail.com"
@@ -14,14 +14,19 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-      toc: true
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
       permalink: "/posts/:title"
+      excerpt_separator: <!--more-->
+  - scope:
+      path: ""
+    values:
       toc: true
+      aside: true
+
 
 # table of contents
 toc:

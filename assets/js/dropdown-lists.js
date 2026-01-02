@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         function setCategoryMode(mode) {
             dropdownList.style.display = mode;
-            icon.classList = (mode == "block") ? "fa-solid fa-angle-down fa-sm" : "fa-solid fa-angle-right fa-sm";
+            icon.classList = "fa-solid fa-angle-" + ((mode == "block") ? "down" : "right") + " fa-sm";
         }
         
         function toggleCategory(index) {
