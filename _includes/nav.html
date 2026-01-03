@@ -1,7 +1,7 @@
 {%- assign paths = site.pages | map: "path" -%}
 
 <nav>
-  <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="/"><i class="fa-regular fa-house"></i></a>
+  <a class="title nav-link{% if page.url == '/' %} active{% endif %}" href="/">{{site.title}}</a>
   {%- if paths -%}
     {%- for path in paths -%}
       {%- assign a_page = site.pages | where: "path", path | first -%}
@@ -11,4 +11,7 @@
     {%- endfor -%}
   {%- endif -%}
   <a class="right" href="#" id="light-toggle"><i class="fa fa-adjust fa-flip-horizontal"></i></a>
+  {% if page.aside and page.layout != "posts" %}
+  <a class="right" href="#" id="aside-switch"><i class="fa-solid fa-bars-staggered"></i></a>
+  {% endif %}
 </nav>

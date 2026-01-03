@@ -1,9 +1,9 @@
-title: "Tu paso a paso"
+title: "Demo site"
 lang: "bg"
 description: "Испанска граматика и лексика чрез проста практика."
 
 owner: "Anna Ilieva"
-email: "a.j.webdev.prof@gmail.com"
+email: "your.email.here@gmail.com"
 baseurl: "" # the subpath of the site
 url: "https://tu-paso-a-paso.github.io"
 
@@ -26,7 +26,6 @@ defaults:
     values:
       toc: true
       aside: true
-
 
 # table of contents
 toc:

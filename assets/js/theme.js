@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const html = document.querySelector("html");
-    const btnsw = document.getElementById('light-toggle');
+    const html = document.querySelector('html');
+    const themeSw = document.getElementById('light-toggle');
     
     function setTheme(theme) {
         localStorage.setItem('theme', theme);
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTheme('light');
     }
     
-    btnsw.addEventListener("click", () => switchTheme());
+    themeSw.onclick = () => switchTheme();
     
-    setTheme(localStorage.getItem('theme'));
+    setTheme(localStorage.getItem('theme') || 'light');
 });
