@@ -1,5 +1,6 @@
-@use "base/_root";
-@use "base/_layout";
+@import
+  "base/_root",
+  "base/_layout";
 
 nav, .content aside, footer {
   user-select: none;
