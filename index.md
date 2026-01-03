@@ -1,4 +1,5 @@
 ---
+title: Home page
 layout: posts
 ---
 

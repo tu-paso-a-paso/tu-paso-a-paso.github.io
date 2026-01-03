@@ -1,0 +1,29 @@
+@use "aside";
+
+.content {
+  padding: 20px 10px;
+  
+  ul, ol {
+    list-style-position: inside;
+  }
+  
+  main {
+    padding: 0 25px;
+    
+    h1, h2, h3, h4, h5, h6,
+    p, blockquote, pre,
+    dl, figure, ul, ol {
+      margin-bottom: 20px * 0.5;
+    }
+    
+    table {
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 14px;
+      text-align: left;
+      border: 1px solid #ccc;
+    }
+  }
+}

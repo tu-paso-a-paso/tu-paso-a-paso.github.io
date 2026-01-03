@@ -1,0 +1,31 @@
+/* Header, nav, footer */
+
+header {
+  padding: 10px 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+nav {
+  a {
+    float: left;
+    display: block;
+    padding: 14px 10px;
+    text-align: center;
+    
+    &.right {
+      float: right;
+    }
+    &.title {
+      font-size: 14px;
+      font-weight: bold;
+      font-family:Verdana, Geneva, Tahoma, sans-serif
+    }
+  }
+}
+
+footer {
+  padding: 20px;
+  font-size: .9rem;
+  text-align: center;
+}

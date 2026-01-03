@@ -1,0 +1,36 @@
+// lines --> nav and footer are the upper and bottom lines of the page
+
+:root {
+  --header-tx: #000000;
+
+  --lines-bg: #EFEFEF;
+  --lines-border: hsla(0, 8%, 10%, 0.095);
+  --nav-tx: #2b2929;
+  --footer-tx: #000000;
+  
+  --content-tx: #000000;
+  --aside-bg: rgba(0, 0, 0, .08);
+  --main-bg: #fdfdfd;
+  
+  --article-border: #808080;
+  --article-content: #000000;
+  
+  --link-tx: #1E69D8;
+}
+
+[data-theme=dark] {
+  --header-tx: #ffffff;
+  
+  --lines-bg: #181818;
+  --lines-border: hsla(0, 20%, 82%, 0.221);
+  --nav-tx: #ffffff;
+  --footer-tx: #cccccc;
+  
+  --content-tx: #ffffff;
+  --aside-bg: rgba(114, 97, 97, 0.138);
+  --main-bg: #181818;
+
+  --article-content: #cccccc;
+
+  --link-tx: #95daf7;
+}

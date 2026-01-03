@@ -1,0 +1,66 @@
+/* Aside */
+
+.content aside {
+  .part {
+    width: 200px;
+    padding: 20px;
+    background: var(--aside-bg);
+
+    &:nth-child(n+2) {
+      margin-top: 15px;
+    }
+
+    .fa-dropdown-list {
+      li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 22px;
+
+        .i-btn {
+          position: absolute;
+          inset-inline-start: -4.8px;
+
+          i {
+            cursor: pointer;
+          }
+        }
+
+        .hidden-list {
+          display: none;
+        }
+      }
+    }
+
+    ul::before {
+      font-weight: bold;
+      font-size: 19px;
+    }
+
+    #toc::before {
+      content: "Съдържание";
+    }
+
+    #category-list::before {
+      content: "Категории";
+    }
+
+    #tag-list::before {
+      content: "Тагове";
+    }
+
+    #toc,
+    #category-list,
+    #tag-list {
+      line-height: 30px;
+      font-weight: bold;
+
+      >li:first-child {
+        margin-top: 10px;
+      }
+    }
+
+    .toc-sublist li {
+      padding-left: 5px;
+    }
+  }
+}

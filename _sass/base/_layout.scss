@@ -1,0 +1,32 @@
+/* Layout of the page */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  overflow: visible;
+  
+  aside {
+    top: 20px;
+    position: sticky;
+    height: fit-content;
+  }
+  
+  main {
+    flex: 1;
+  }
+}

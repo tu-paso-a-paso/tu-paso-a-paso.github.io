@@ -1,0 +1,65 @@
+@use "base/_root";
+@use "base/_layout";
+
+nav, .content aside, footer {
+  user-select: none;
+}
+
+header, nav, .content, footer {
+  a {
+    color: var(--link-tx);
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+header {
+  color: var(--header-tx);
+
+  h1 a {
+    color: var(--header-tx) !important;
+  }
+}
+
+.content {
+  color: var(--content-tx);
+  background: var(--main-bg);
+
+  aside a {
+    color: var(--base-tx);
+    
+    &:hover {
+      color: var(--link-tx);
+    }
+  }
+}
+
+$borderline: 3px solid var(--lines-border);
+
+nav {
+  background: var(--lines-bg);
+  border-bottom: $borderline;
+  color: var(--nav-tx);
+
+  a {
+    color: var(--nav-tx);
+    
+    &.nav-link {
+      &:hover {
+        background-color: var(--nav-hover);
+      }
+      &.active {
+        background-color: var(--nav-active);
+      }
+    }
+  }
+}
+
+footer {
+  background: var(--lines-bg);
+  border-top: $borderline;
+  color: var(--footer-tx);
+}

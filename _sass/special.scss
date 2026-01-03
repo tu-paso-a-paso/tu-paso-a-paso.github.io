@@ -1,0 +1,51 @@
+/* .normal-table>tbody>tr>td:first-child {
+    width: 200px;
+} */
+
+.normal-table {
+  width: 100%;
+  
+  th {
+    text-align: center;
+    color: black;
+    background-color: var(--bd-day);
+  }
+  
+  td {
+    color: black;
+    background-color: #f0f0f0;
+  }
+  
+  > tbody > tr  {
+    > td:first-child,
+    > td:nth-child(6),
+    > td:nth-child(11) {
+      color: black;
+      background-color: rgb(209, 201, 201);
+      font-weight: bold;
+    }
+  }
+}
+
+.inside-table {
+  width: 100%;
+  margin-bottom: 0px;
+  border: 1px solid #ccc;
+
+  th {
+    background-color: #f0f0f0;
+  }
+
+  > tbody > tr {
+    > th,
+    > td {
+      width: 100px;
+      text-align: center;
+    }
+  }
+}
+
+.ending {
+  font-weight: 900;
+  color: tomato;
+}
